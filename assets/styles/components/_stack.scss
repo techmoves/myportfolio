@@ -1,0 +1,29 @@
+.stack {
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      font-family: "Inter", sans-serif;
+      padding: 1rem 1.4rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2rem;
+      color: $color-white;
+
+      &:not(:last-of-type) {
+        border-right: 1px solid #555;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .stack {
+    ul {
+      li {
+        padding: 1rem 1.6rem;
+      }
+    }
+  }
+}

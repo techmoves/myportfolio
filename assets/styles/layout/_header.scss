@@ -1,0 +1,117 @@
+.header {
+  &-mobile {
+    display: flex;
+    justify-content: center;
+    background-color: $color-primary;
+    background-image: url(../../../assets/images/mobile_menu_background.svg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 2.4rem;
+
+    &-visibility {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 2.4rem;
+
+      li {
+        padding: 0.8rem 1.6rem;
+
+        &:first-of-type {
+          justify-content: flex-end;
+          text-align: right;
+          padding-right: 0.5rem;
+
+          img {
+            width: 3rem;
+          }
+        }
+
+        a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: $color-primary-4;
+          text-decoration: none;
+          font-size: 2.4rem;
+          font-weight: 500;
+          line-height: 3.2rem;
+        }
+      }
+    }
+  }
+
+  &-desktop {
+    display: none;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 2.5rem 10%;
+      align-items: center;
+      color: $color-primary-4;
+      box-shadow: 0 2px 4px rgba($color-primary-2, 0.2);
+      position: fixed;
+      width: 100%;
+      z-index: 99;
+      background-color: $color-primary;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .header {
+    nav {
+      ul {
+        background-color: rgba($color-primary, 0.7);
+        box-shadow: none;
+        padding: 1.6rem 10%;
+
+        div {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.8rem;
+          justify-content: center;
+
+          li {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 2rem;
+
+            a {
+              padding: 1rem 1.2rem;
+              text-decoration: none;
+              color: $color-white;
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
+    &-mobile {
+      display: none;
+    }
+
+    &-mobile-hamburger {
+      display: none;
+    }
+
+    &-desktop {
+      display: block;
+    }
+  }
+}

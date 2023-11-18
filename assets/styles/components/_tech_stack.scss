@@ -1,0 +1,41 @@
+.tech-stack {
+  list-style: none;
+  text-align: left;
+  color: $color-primary-4;
+  padding: 1.2rem;
+  width: 50%;
+
+  &-header {
+    color: $color-primary-2;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+  }
+
+  li:not(:first-child) {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 0.7rem;
+  }
+
+  &-last {
+    padding-bottom: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .tech-stack {
+    width: 100% !important;
+
+    &-header {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 29.333px;
+    }
+
+    li:not(:first-child) {
+      line-height: 28.444px;
+    }
+  }
+}

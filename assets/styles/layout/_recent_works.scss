@@ -1,0 +1,42 @@
+.recent-works {
+  padding: 8rem 2.4rem 9rem 2.4rem;
+  background-image: url("../../../assets/images/mobile_background.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 25rem;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: $color-primary-1;
+    text-transform: uppercase;
+    line-height: 5.2rem;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 4.8rem;
+}
+
+@media screen and (min-width: 48em) {
+  .recent-works {
+    padding: 11.4rem 10%;
+    background-image: url(../../../assets/images/desktop_background.svg);
+    background-position-y: 30rem;
+
+    h2 {
+      font-size: 6.4rem;
+      line-height: 11.4rem;
+      text-transform: none;
+    }
+  }
+
+  .projects {
+    padding-top: 8.8rem;
+    gap: 8.8rem;
+  }
+}

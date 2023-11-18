@@ -1,0 +1,31 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 1.2rem;
+  background-color: $color-primary-2;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  letter-spacing: 0.36px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    box-shadow: 0 0.8rem 1.6rem 0 rgba($color-primary-2, 0.48);
+    transform: translateY(-0.2rem);
+  }
+
+  &:active,
+  &:focus {
+    background-color: #5e42d7;
+    box-shadow: 0 0.5rem 1rem rgba($color-primary-2, 0.15);
+    transform: translateY(0);
+    color: #edecff;
+  }
+
+  &:disabled {
+    background-color: #000;
+  }
+}

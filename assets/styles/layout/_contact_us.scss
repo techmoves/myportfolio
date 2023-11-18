@@ -1,0 +1,127 @@
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem 2.4rem 5rem 2.4rem;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+
+    &-desktop {
+      display: none;
+    }
+
+    h3 {
+      font-size: 3.2rem;
+      font-weight: 500;
+      line-height: 4.4rem;
+      color: $color-primary-1;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: Inter, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+      color: #f5f5ff;
+      text-align: center;
+    }
+  }
+
+  &-form {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    &-desktop {
+      display: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1.5rem 1.6rem;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+
+        &:focus {
+          background-color: #f7f3ff;
+          color: #191765;
+          outline: none;
+          border: none;
+        }
+      }
+
+      button {
+        border: none;
+        padding: 1.2rem 1.5rem;
+        color: $color-primary-4;
+        cursor: pointer;
+        margin-top: 2rem;
+      }
+    }
+
+    &-error {
+      color: red;
+      font-size: 1.6rem;
+      align-self: flex-start;
+      margin-top: -1.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .contact-us {
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 8.8rem;
+    padding-top: 11.4rem;
+    padding-bottom: 11.4rem;
+
+    &-text {
+      &-mobile {
+        display: none;
+      }
+
+      &-desktop {
+        display: block;
+      }
+
+      h3 {
+        text-transform: none;
+      }
+    }
+
+    &-form {
+      width: 100%;
+
+      &-mobile {
+        display: none;
+      }
+
+      &-desktop {
+        display: flex;
+        width: 100%;
+        gap: 2.4rem;
+        justify-content: space-between;
+      }
+
+      form {
+        button {
+          width: 16%;
+          margin-top: 4.5rem;
+        }
+      }
+    }
+  }
+}
