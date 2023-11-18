@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Pacifico&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.png" />
+    <title>Techmoves</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-mobile header-mobile-visibility">
+        <ul>
+          <li id="cancel">
+            <img src="assets/images/cancel_icon.svg" alt="Cancel Icon" />
+          </li>
+          <li>
+            <a href="#portfolio" onclick="hide()">
+              Portfolio
+              <img src="assets/images/chevron_icon.svg" alt="Chevron Right" />
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onclick="hide()">
+              Projects
+              <img src="assets/images/chevron_icon.svg" alt="Chevron Right" />
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onclick="hide()">
+              Contact
+              <img src="assets/images/chevron_icon.svg" alt="Chevron Right" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul>
+          <div>
+            <li><p class="logo">Techmoves</p></li>
+          </div>
+          <div>
+            <li class="header-mobile-hamburger" id="hamburger">
+              <img src="assets/images/icon_menu.svg" alt="Menu Icon" />
+            </li>
+            <li class="header-desktop"><a href="#portfolio">Portfolio</a></li>
+            <li class="header-desktop"><a href="#projects">Projects</a></li>
+            <li class="header-desktop"><a href="#contact">Contact</a></li>
+            <li class="header-desktop">
+              <a href="mailto:sahalu.aminuk@gmail.com"
+                ><img src="./assets/images/mail_icon.svg" alt="Mail"
+              /></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="headline" id="portfolio">
+        <div class="headline-header">
+          <h1>Phelelani Ndlovu</h1>
+          <h2>Software Developer</h2>
+        </div>
+
+        <div class="headline-supporting-text">
+          <p>
+            I can help you build a product , feature or website Look through
+            some of my work and experience!
+          </p>
+          <p class="headline-supporting-text-desktop">
+            If you like what you see and have a project you need coded, don't
+            hesitate to contact me.
+          </p>
+          <div class="divider">
+            <hr />
+          </div>
+        </div>
+
+        <div class="headline-tech-stack">
+          <ul class="tech-stack">
+            <li class="tech-stack-header">Language</li>
+            <li>JavaScript</li>
+            <li>Ruby</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+
+          <ul class="tech-stack">
+            <li class="tech-stack-header">Frameworks</li>
+            <li>Ruby on Rails</li>
+            <li>React</li>
+            <li>Rspec</li>
+            <li>Capybara</li>
+            <li>Sass</li>
+          </ul>
+
+          <ul class="tech-stack tech-stack-last">
+            <li class="tech-stack-header">Skills</li>
+            <li>Version Control</li>
+            <li>CLI</li>
+            <li>GitHub</li>
+            <li>TDD</li>
+            <li>API Design</li>
+          </ul>
+        </div>
+
+        <div class="divider headline-divider">
+          <hr />
+        </div>
+
+        <div class="headline-supporting-item">
+          <div
+            class="headline-supporting-item-text headline-supporting-item-text-desktop"
+          >
+            <p>Work</p>
+            <img src="assets/images/arrow_down.svg" alt="Down Arrow" />
+          </div>
+
+          <div class="social-media">
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/sahlminkok"
+                  target="_blank"
+                  rel="noopener"
+                  ><img src="assets/images/github_icon.svg" alt="GitHub"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/phelelani-ndlovu/"
+                  target="_blank"
+                  rel="noopener"
+                  ><img src="assets/images/linkedin_icon.svg" alt="LinkedIn"
+                /></a>
+              </li>
+              <li>
+                <a
+                 href="https://wellfound.com/u/phelelani-ndlovu"
+                  target="_blank"
+                  rel="noopener"
+                  ><img src="assets/images/angelist_icon.svg" alt="Angelist"
+                /></a>
+              </li>
+              <li>
+                <a
+                     href="https://twitter.com/Dopezonke_"
+                  target="_blank"
+                  rel="noopener"
+                  ><img src="assets/images/twitter_icon.svg" alt="Twitter"
+                /></a>
+              </li>
+              <li>
+                <a
+                      href="https://medium.com/@techmoves"
+                  target="_blank"
+                  rel="noopener"
+                  ><img src="assets/images/medium_icon.svg" alt="Medium"
+                /></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="headline-supporting-item-text">
+            <img src="assets/images/arrow_down.svg" alt="Down Arrow" />
+            <p>Work</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="recent-works" id="projects">
+        <h2>My recent work</h2>
+
+        <div class="divider">
+          <hr />
+        </div>
+
+        <div class="projects"></div>
+      </section>
+
+      <section class="modal-section"></section>
+
+      <section class="contact-us" id="contact">
+        <div class="contact-us-text">
+          <h3 class="contact-us-text-mobile">Contact us</h3>
+          <h3 class="contact-us-text-desktop">Let's chat!</h3>
+          <p>
+            If you have an application you are interested in developing, a
+            feature that you need built or a project that needs coding. I'd love
+            to help with it.
+          </p>
+        </div>
+        <div class="contact-us-form">
+          <form
+            action="https://formspree.io/f/mknlkzny"
+            method="POST"
+            id="form"
+          >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="contact-us-form-mobile"
+              placeholder="Full Name"
+              required
+              minlength="3"
+              maxlength="30"
+            />
+            <div class="contact-us-form-desktop">
+              <input
+                type="text"
+                name="first name"
+                id="first_name"
+                placeholder="First Name"
+                required
+                minlength="3"
+                maxlength="15"
+              />
+              <input
+                type="text"
+                name="last name"
+                id="last_name"
+                placeholder="Last Name"
+                required
+                minlength="3"
+                maxlength="15"
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+            <span class="contact-us-form-error"></span>
+            <textarea
+              name="message"
+              id="message"
+              cols="20"
+              rows="7"
+              placeholder="Write your message here"
+              required
+              maxlength="500"
+            ></textarea>
+            <button type="submit" class="btn">Get in touch</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="divider footer-divider">
+        <hr />
+      </div>
+
+      <div class="footer-div">
+        <div class="social-media footer-icons">
+          <ul>
+            <li>
+              <a
+                href="https://github.com/techmoves"
+                target="_blank"
+                rel="noopener"
+                ><img src="assets/images/github_icon.svg" alt="GitHub"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/phelelani-ndlovu/"
+                target="_blank"
+                rel="noopener"
+                ><img src="assets/images/linkedin_icon.svg" alt="LinkedIn"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://wellfound.com/u/phelelani-ndlovu"
+                target="_blank"
+                rel="noopener"
+                ><img src="assets/images/angelist_icon.svg" alt="Angelist"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/Dopezonke_"
+                target="_blank"
+                rel="noopener"
+                ><img src="assets/images/twitter_icon.svg" alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@techmoves"
+                target="_blank"
+                rel="noopener"
+                ><img src="assets/images/medium_icon.svg" alt="Medium"
+              /></a>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          href="muhndlovu28@gmail.com"
+          id="mail"
+          class="footer-div-mail"
+          >muhndlovu28@gmail.com</a
+        >
+      </div>
+
+      <div class="footer-home-indicator"></div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
