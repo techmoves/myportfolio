@@ -17,8 +17,8 @@ const projectsData = [
   {
     id: 2,
     imgSrc: [
-      "./assets/images/crypto-metrics.jpg",
-      "./assets/images/modal_crypto-metrics.jpg",
+
+      "./assets/images/portf.png",
     ],
     heading: "Crypto Metrics",
     paragraph:
