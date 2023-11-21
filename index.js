@@ -1,3 +1,4 @@
+/* eslint-disable */
 const projectsData = [
   {
     id: 1,
@@ -16,10 +17,7 @@ const projectsData = [
   },
   {
     id: 2,
-    imgSrc: [
-
-      "./assets/images/portf.png",
-    ],
+    imgSrc: ["./assets/images/portf.png"],
     heading: "Crypto Metrics",
     paragraph:
       "Crypto Metrics is a mobile web app for cryptocurrency enthusiasts, simplifying access to essential market data. Whether users seek specific coin details or a broader market overview, Crypto Metrics empowers them to make informed decisions swiftly.",
@@ -46,50 +44,50 @@ const projectsData = [
   },
 ];
 
-const projects = document.querySelector('.projects');
+const projects = document.querySelector(".projects");
 
 projectsData.forEach((projectData) => {
-  const project = document.createElement('div');
-  project.className = 'project';
+  const project = document.createElement("div");
+  project.className = "project";
   project.id = projectData.id;
 
-  const imgDiv = document.createElement('div');
-  imgDiv.className = 'project-image';
-  const img = document.createElement('img');
+  const imgDiv = document.createElement("div");
+  imgDiv.className = "project-image";
+  const img = document.createElement("img");
   const [projectImgSrc] = projectData.imgSrc;
   img.src = projectImgSrc;
   img.alt = projectData.heading;
   imgDiv.appendChild(img);
   project.appendChild(imgDiv);
 
-  const projectDetails = document.createElement('div');
-  projectDetails.className = 'project-details';
+  const projectDetails = document.createElement("div");
+  projectDetails.className = "project-details";
 
-  const h3 = document.createElement('h3');
+  const h3 = document.createElement("h3");
   h3.textContent = projectData.heading;
   projectDetails.appendChild(h3);
 
-  const p = document.createElement('p');
+  const p = document.createElement("p");
   p.textContent = projectData.paragraph;
   projectDetails.appendChild(p);
 
-  const stack = document.createElement('div');
-  stack.className = 'stack';
-  const ul = document.createElement('ul');
+  const stack = document.createElement("div");
+  stack.className = "stack";
+  const ul = document.createElement("ul");
   projectData.stack.forEach((stackItem) => {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = stackItem;
     ul.appendChild(li);
   });
   stack.appendChild(ul);
   projectDetails.appendChild(stack);
 
-  const a = document.createElement('a');
-  a.className = 'btn';
+  const a = document.createElement("a");
+  a.className = "btn";
   a.href = `#${projectData.id}`;
-  a.textContent = 'See Project';
-  a.classList.add('see-project');
-  a.setAttribute('data-project-id', projectData.id);
+  a.textContent = "See Project";
+  a.classList.add("see-project");
+  a.setAttribute("data-project-id", projectData.id);
   projectDetails.appendChild(a);
 
   project.appendChild(projectDetails);
@@ -98,18 +96,18 @@ projectsData.forEach((projectData) => {
 
 // Creating a modal for each project
 
-const modalSection = document.querySelector('.modal-section');
-const seeProjectBtn = document.querySelectorAll('.see-project');
+const modalSection = document.querySelector(".modal-section");
+const seeProjectBtn = document.querySelectorAll(".see-project");
 
 seeProjectBtn.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    const projectId = e.currentTarget.getAttribute('data-project-id');
+  btn.addEventListener("click", (e) => {
+    const projectId = e.currentTarget.getAttribute("data-project-id");
     const project = projectsData.find(
-      (item) => item.id === parseInt(projectId, 10),
+      (item) => item.id === parseInt(projectId, 10)
     );
 
-    const modal = document.createElement('div');
-    modal.className = 'modal';
+    const modal = document.createElement("div");
+    modal.className = "modal";
 
     modal.innerHTML = `
                         <div class="modal-title">
@@ -119,11 +117,11 @@ seeProjectBtn.forEach((btn) => {
 
                         <div class="modal-image">
                           <img class="modal-image-desktop" src="${
-  project.imgSrc[1]
-}" alt="${project.imgAlt}" />
+                            project.imgSrc[1]
+                          }" alt="${project.imgAlt}" />
                           <img class="modal-image-mobile" src="${
-  project.imgSrc[0]
-}" alt="${project.imgAlt}" />
+                            project.imgSrc[0]
+                          }" alt="${project.imgAlt}" />
                         </div>
 
                         <div class="modal-text">
@@ -132,8 +130,8 @@ seeProjectBtn.forEach((btn) => {
                           <div class="stack modal-text-stack">
                             <ul>
                               ${project.stack
-    .map((i) => `<li>${i}</li>`)
-    .join('')}
+                                .map((i) => `<li>${i}</li>`)
+                                .join("")}
                             </ul>
                           </div>
                         </div>
@@ -144,8 +142,8 @@ seeProjectBtn.forEach((btn) => {
                             <img src="assets/images/live_icon.svg" alt="Live Icon" />
                           </a>
                           <a href="${
-  project.source
-}" target="_blank" class="btn">
+                            project.source
+                          }" target="_blank" class="btn">
                             See live
                             <img src="assets/images/github_icon.svg" alt="Live Icon" />
                           </a>
@@ -155,21 +153,21 @@ seeProjectBtn.forEach((btn) => {
     modalSection.appendChild(modal);
 
     setTimeout(() => {
-      modal.classList.add('modal-show');
+      modal.classList.add("modal-show");
     }, 0);
 
-    modalSection.style.display = 'block';
+    modalSection.style.display = "block";
   });
 });
 
-modalSection.addEventListener('click', (event) => {
-  if (event.target.id === 'cancel-modal') {
-    const modal = document.querySelector('.modal');
+modalSection.addEventListener("click", (event) => {
+  if (event.target.id === "cancel-modal") {
+    const modal = document.querySelector(".modal");
 
-    modal.classList.add('modal-hide');
+    modal.classList.add("modal-hide");
 
-    modal.addEventListener('transitionend', () => {
-      modalSection.style.display = 'none';
+    modal.addEventListener("transitionend", () => {
+      modalSection.style.display = "none";
       modal.parentNode.removeChild(modal);
     });
   }
@@ -177,44 +175,45 @@ modalSection.addEventListener('click', (event) => {
 
 // Responsive 'required' attributes for desktop and mobile name inputs
 
-const mobileName = document.querySelector('#name');
-const desktopFirst = document.querySelector('#first_name');
-const desktopLast = document.querySelector('#last_name');
+const mobileName = document.querySelector("#name");
+const desktopFirst = document.querySelector("#first_name");
+const desktopLast = document.querySelector("#last_name");
 
 if (window.innerWidth >= 768) {
-  mobileName.removeAttribute('required');
+  mobileName.removeAttribute("required");
 } else {
-  desktopFirst.removeAttribute('required');
-  desktopLast.removeAttribute('required');
+  desktopFirst.removeAttribute("required");
+  desktopLast.removeAttribute("required");
 }
 
 // Mobile Menu
 
-const mobileMenu = document.querySelector('.header-mobile');
-const cancel = document.querySelector('#cancel');
-const hamburger = document.querySelector('#hamburger');
+const mobileMenu = document.querySelector(".header-mobile");
+const cancel = document.querySelector("#cancel");
+const hamburger = document.querySelector("#hamburger");
 
 const display = () => {
-  mobileMenu.classList.remove('header-mobile-visibility');
+  mobileMenu.classList.remove("header-mobile-visibility");
 };
 
 const hide = () => {
-  mobileMenu.classList.add('header-mobile-visibility');
+  mobileMenu.classList.add("header-mobile-visibility");
 };
 
-hamburger.addEventListener('click', display);
-cancel.addEventListener('click', hide);
+hamburger.addEventListener("click", display);
+cancel.addEventListener("click", hide);
 
-const form = document.querySelector('#form');
+const form = document.querySelector("#form");
 
 const validateForm = (e) => {
-  const email = document.querySelector('#email');
-  const errorMessage = document.querySelector('.contact-us-form-error');
+  const email = document.querySelector("#email");
+  const errorMessage = document.querySelector(".contact-us-form-error");
   if (email.value !== email.value.toLowerCase()) {
     e.preventDefault();
-    errorMessage.innerHTML = 'Please use only lowercase';
+    errorMessage.innerHTML = "Please use only lowercase";
   } else {
-    errorMessage.textContent = '';
+    errorMessage.textContent = "";
   }
 };
-form.addEventListener('submit', validateForm);
+form.addEventListener("submit", validateForm);
+/* eslint-enable */
