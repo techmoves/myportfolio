@@ -31,7 +31,7 @@
 
 # 📖 Portfolio <a name="about-project"></a>
 
-**[Portfolio]** 
+**[My Portfolio]** 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,7 +56,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [live link](/)
+- [live link](https://techmoves.github.io/myportfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,10 +100,10 @@ Open Index.html using live server extension.
 
 ### Deployment
 
-You can deploy this project using:
+ deployed this project using:
 
 - GitHub Pages
-- Render
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
